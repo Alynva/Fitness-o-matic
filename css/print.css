@@ -1,0 +1,77 @@
+@media print {
+	* {
+		word-wrap: break-word;
+	}
+	section {
+/* 		border: 1px solid; */
+/* 		margin: .5cm 1cm; */
+	}
+	section:after {
+/* 		display: block; */
+/* 		position: absolute; */
+/* 		bottom: 1cm; */
+/* 		left: 0; */
+/* 		right: 0; */
+	}
+	section:first-of-type {
+/* 		margin-top: 61px; */
+	}
+	@page {
+		margin: 2cm 0;
+/* 		margin: 2cm 0; */
+	}
+	@page :left {
+		
+	}
+
+	@page :right {
+		
+	}
+	@page :first {
+		margin: 0 0 2cm 0;
+	}
+	@top {
+		
+	}
+	@bottom {
+/* 		content: "Page " counter(page) " of " counter(pages) */
+    }
+}
+body[data-title]:before {
+/* 	content: attr(data-title); */
+/* 	display: block; */
+	width: 100%;
+	font-size: 25pt;
+	text-align: center;
+	padding: 15pt;
+	position: absolute;
+	left: 0;
+	top: -.5cm;
+	z-index: 2;
+/* 	line-height: 3em; */
+}
+body[p] .thumbnail > .configs {
+	display: none;
+}
+section {
+/* 	padding: 1cm .1cm; */
+	text-align: center;
+}
+section > div > div {
+	float: none !important;
+    display: inline-block;
+    vertical-align: middle;
+	text-align: initial;
+}
+body[p] input {
+	display: none !important;
+}
+body[p] h1 {
+	text-align: center;
+	margin: 30px auto;
+	padding: 6px 12px;
+    line-height: 1.42857143;
+	font-size: 25pt;
+	width: 100%;
+	max-width: 13em;
+}
