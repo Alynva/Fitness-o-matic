@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Criador de treinos - Fitness-o-matic</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css">
+		<link rel="stylesheet" type="text/css" href="http://codepen.io/Alynva/pen/LRobKb.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://use.fontawesome.com/0b45de8b5b.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/js/bootstrap-select.min.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<nav checked>
+			<div id="drawer">
+				<div class="input-group input-group-sm">
+					<input id="input-text" type="search" class="form-control" placeholder="Procurar um exercício" title="No mínimo 3 caracteres.">
+					<span class="input-group-btn" aria-hidden="true">
+						<button type="button" class="btn btn-default fa fa-search" aria-hidden="true"></button>
+					</span>
+				</div>
+				
+				<!-- Nav tabs -->
+				<ul id="tab-style" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#treino" aria-controls="treino" role="tab" data-toggle="tab">Treino</a></li>
+					<li role="presentation"><a href="#cardio" aria-controls="cardio" role="tab" data-toggle="tab">Cardio</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active row" id="treino">
+						<div class="col-xs-6">
+							<select id="select-groups" class="selectpicker form-control show-menu-arrow" data-live-search="true" multiple title="Grupos musculares" data-style="btn-primary">
+								<option>Peitoral</option>
+								<option>Costas</option>
+								<option>Trapézios</option>
+							</select>
+						</div>
+						<div class="col-xs-6">
+							<select id="select-equipments" class="selectpicker form-control show-menu-arrow" data-live-search="true" multiple title="Equipamentos" data-style="btn-info">
+								<option>Barra</option>
+								<option>Halteres</option>
+								<option>Polia</option>
+							</select>
+						</div>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="cardio"></div>
+				</div>
+
+				<div id="results">
+				</div>
+			</div>
+		</nav>
+		<main class="container-fluid">
+			<div id="loading"><i class="fa fa-circle-o-notch fa-spin fa-5x fa-fw"></i><b>CARREGANDO</b></div>
+			<div class="configs">
+				<button class="btn btn-default openCloseMenu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+				<button class="btn btn-default downloadPages"><i class="fa fa-print" aria-hidden="true"></i></button>
+			</div>
+		<!-- 	<section class="row"> -->
+			<section>
+				<input type="text" id="theTitle" class="form-control" placeholder="Título do treinamento"/>
+				<div></div>
+			</section>
+		</main>
+		<!-- Modal -->
+		<div class="modal fade" id="stepsAndReps" tabindex="-1" role="dialog" aria-labelledby="stepsAndRepsLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="stepsAndRepsLabel">Informações</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-inline">
+							<div class="form-group">
+								<label for="inputInfo1" class="control-label">Séries</label>
+								<input type="number" class="form-control" id="inputInfo1" value="0" min="1">
+							</div>
+							<div class="form-group">
+								<label for="inputInfo2" class="control-label">Repetições</label>
+								<input type="text" class="form-control" id="inputInfo2" pattern="^(\d{1,2}(?:[-/])?)+$" title="'n': número. Exemplos: n-n-n ou n/n/n/n/n." required>
+							</div>
+							<button style="display:none"></button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-primary" onclick="saveInfo()">Salvar alterações</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

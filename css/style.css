@@ -1,0 +1,219 @@
+.nav-tabs {
+	text-align: center;
+}
+.nav-tabs > li {
+	display: inline-block;
+	float: inherit;
+}
+.tab-content {
+	margin: 5px;
+}
+.row {
+	margin: 0;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	padding-right: 5px;
+    padding-left: 5px;
+}
+* {
+	transition: all .4s;
+}
+*, .bootstrap-select .dropdown-toggle:focus {
+	outline: none !important;
+}
+body {
+	margin: 0;
+}
+
+body > nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+}
+body > nav > #drawer {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 300px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,.8);
+	transition: left .4s, box-shadow .6s;
+	padding: 5px 0;
+	display: flex;
+    flex-flow: column;
+}
+#results {
+	flex: 0 1 auto;
+    overflow: auto;
+}
+@media (max-width: 910px) {
+	nav[checked] > #drawer {
+		left: -300px;
+	}
+	nav:not([checked]) > #drawer {
+		left: 0;
+	/* 	box-shadow: none; */
+	}
+	nav[checked] ~ main {
+		margin-left: 0;	
+	}
+	nav:not([checked]) ~ main {
+		margin-left: 300px;
+	}
+	nav[checked] ~ main > #loading {
+		left: 0px;
+	}
+	nav:not([checked]) ~ main > #loading {
+		left: 300px;
+	}
+}
+@media (min-width: 910px) {
+	nav[checked] > #drawer {
+		left: 0;
+	}
+	nav:not([checked]) > #drawer {
+		left: -300px;
+	/* 	box-shadow: none; */
+	}
+	nav[checked] ~ main {
+		margin-left: 300px;
+	}
+	nav:not([checked]) ~ main {
+		margin-left: 0;	
+	}
+	nav[checked] ~ main > #loading {
+		left: 300px;
+	}
+	nav:not([checked]) ~ main > #loading {
+		left: 0px;
+	}
+}
+.input-group.input-group-sm {
+	margin: 5px;
+}
+#results > div {
+	margin: 7px;
+}
+#results > .thumbnail button {
+	margin: 4px 0;
+}
+main {
+	padding: 10px;
+	background: rgb(204,204,204);
+	overflow: auto;
+	min-height: 100vh;
+/* 	position: relative; */
+}
+main > #loading {
+	background: rgba(0,0,0,.3);
+	position: fixed;
+/* 	left: 0; */
+	top: 0;
+	right: 0;
+	height: 100vh;
+	color: #5bc0de;
+	text-shadow: 0 1px 3px rgba(0,0,0,.25);
+	z-index: -50;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+main > #loading > i {
+	margin: 0 auto;
+}
+main > #loading > b {
+	font-size: 1.5em;
+}
+main > .configs {
+/* 	margin-left: -10px; */
+	position: fixed;
+	right: 10px;
+	z-index: 10;
+	min-width: 45px;
+	pointer-events: none;
+}
+main > .configs * {
+	pointer-events: initial;
+}
+@media (min-width: 910px) {
+	nav[checked] ~ main > .configs {
+		left: 310px
+	}
+	nav:not([checked]) ~ main > .configs {
+		left: 10px
+	}
+}
+@media (max-width: 910px) {
+	nav:not([checked]) ~ main > .configs {
+		left: 310px
+	}
+	nav[checked] ~ main > .configs {
+		left: 10px
+	}
+}
+main > .configs > .btn {
+	box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+main > .configs > .btn:nth-child(1) {
+	float: left;
+}
+main > .configs > .btn:nth-child(2) {
+	float: right;
+}
+main input#theTitle {
+/* 	display: block; */
+	margin: 30px auto;
+	border-width: 0;
+	border-bottom-width: 2px;
+/* 	padding: 10px; */
+	background: transparent;
+	font-size: 25pt;
+	text-align: center;
+/* 	line-height: 1.5em; */
+	width: 100%;
+	max-width: 13em;
+	height: initial;
+}
+main input#theTitle:focus {
+	color: #66afe9;
+}
+main input#theTitle:not(:focus) {
+	border-color: #bbb;
+}
+main input#theTitle:focus::-webkit-input-placeholder {
+   color: rgba(102,175,233,.6);
+}main input#theTitle:focus:-moz-placeholder { /* Firefox 18- */
+   color: rgba(102,175,233,.6);  
+}main input#theTitle:focus::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(102,175,233,.6);  
+}main input#theTitle:focus:-ms-input-placeholder {  
+   color: rgba(102,175,233,.6);  
+}
+section {
+	margin: 50px auto !important;
+	background-color: #fff;
+	box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+/* 	width: 63.636363vw; */
+	width: 21cm;
+/* 	min-height: 90vw; */
+	height: 29.7cm;
+	word-wrap: break-word;
+	overflow: hidden;
+	padding: 2cm 0;
+}
+section:first-of-type {
+	padding: 0 0 2cm 0;
+}
+section .thumbnail {
+	position: relative;
+}
+.thumbnail > .configs {
+	display: inherit !important;
+	position: absolute;
+	right: 4px;
+}
+.configs > .btn {
+	margin: 3px;
+}
