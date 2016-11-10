@@ -36,3 +36,6 @@ myExercicio.name = "Bicicleta";
 myExercicio.img = "http://www.musculacao.net/workoutplanner/noaccimages-exercises/Cardio/Cardio/Bicicleta%20999.jpg";
 myExercicio.style = "Cardio";
 bd.push(myExercicio);
+
+console.log("com");
+console.log(bd);
