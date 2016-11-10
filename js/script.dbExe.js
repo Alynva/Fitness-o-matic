@@ -39,3 +39,4 @@ bd.push(myExercicio);
 
 console.log("com");
 console.log(bd);
+loadResults();
