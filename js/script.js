@@ -73,15 +73,15 @@ function addExe(i) {
 	thumbnail.appendChild(configs);
 
 	var img = document.createElement("img");
-	img.src = bd[i].img;
-	img.setAttribute("alt", bd[i].name);
+	img.src = db[i].img;
+	img.setAttribute("alt", db[i].name);
 	thumbnail.appendChild(img);
 
 	var caption = document.createElement("div");
 	caption.classList.add("caption");
 
 	var title = document.createElement("h4");
-	title.innerHTML = bd[i].name;
+	title.innerHTML = db[i].name;
 	caption.appendChild(title);
 	
 	var p = document.createElement("p");
@@ -270,15 +270,15 @@ function loadResults() {
 		}
 		return false;
 	}
-	for (var i = 0; i < bd.length; i++) {
-		if ((cond.text == undefined || bd[i].name.search(new RegExp(cond.text, "ig")) != -1) && (cond.style == undefined || cond.style == bd[i].style) && (cond.group == undefined || compareArrayString(cond.group, bd[i].group)) && (cond.equipment == undefined || compareArrayString(cond.equipment, bd[i].equipment))) {
+	for (var i = 0; i < db.length; i++) {
+		if ((cond.text == undefined || db[i].name.search(new RegExp(cond.text, "ig")) != -1) && (cond.style == undefined || cond.style == db[i].style) && (cond.group == undefined || compareArrayString(cond.group, db[i].group)) && (cond.equipment == undefined || compareArrayString(cond.equipment, db[i].equipment))) {
 			
 			var thumbnail = document.createElement("div");
 			thumbnail.classList.add("thumbnail");
 
 			var img = document.createElement("img");
-			img.src = bd[i].img;
-			img.setAttribute("alt", bd[i].name);
+			img.src = db[i].img;
+			img.setAttribute("alt", db[i].name);
 			thumbnail.appendChild(img);
 
 			var caption = document.createElement("div");
@@ -295,7 +295,7 @@ function loadResults() {
 			caption.appendChild(add);
 
 			var title = document.createElement("h4");
-			title.innerHTML = (function (){if (bd[i].name.search(new RegExp(cond.text, "ig")) != -1) return bd[i].name.replace(new RegExp("(^|)("+cond.text+")(|$)", "ig"), "$1<b>$2</b>$3"); else return bd[i].name;})();
+			title.innerHTML = (function (){if (db[i].name.search(new RegExp(cond.text, "ig")) != -1) return db[i].name.replace(new RegExp("(^|)("+cond.text+")(|$)", "ig"), "$1<b>$2</b>$3"); else return db[i].name;})();
 			caption.appendChild(title);
 
 			thumbnail.appendChild(caption);
