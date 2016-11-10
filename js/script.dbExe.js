@@ -1,4 +1,4 @@
-
+var db = db || [];
 var myExercicio;
 
 myExercicio = new Exercicio();
