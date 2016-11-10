@@ -339,3 +339,4 @@ $(".downloadPages").click(function() {
 	$(newWindow.document).ready(function(){newWindow.print()});
 });
 
+loadResults();
