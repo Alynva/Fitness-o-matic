@@ -2,11 +2,11 @@ $:.unshift File.expand_path("../lib", __FILE__)
 require "travis/yaml/version"
 
 Gem::Specification.new do |s|
-  s.name                  = "travis-yaml"
-  s.version               = Travis::Yaml::VERSION
-  s.author                = "Travis CI GmbH"
-  s.email                 = "contact@travis-ci.com"
-  s.homepage              = "https://github.com/travis-ci/travis-yaml"
+  s.name                  = "Fitness-o-matic"
+#   s.version               = Travis::Yaml::VERSION
+  s.author                = "Alisson Nunes"
+  s.email                 = "alynva@gmail.com"
+  s.homepage              = "https://alynva.github.io/Fitness-o-matic/"
   s.summary               = %q{parses your .travis.yml}
   s.description           = %q{parses and validates your .travis.yml, fast and secure}
   s.license               = 'MIT'
