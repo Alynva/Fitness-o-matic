@@ -7,7 +7,7 @@ myExercicio.img = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/4QBoRXhpZg
 myExercicio.style = "Treino";
 myExercicio.group = "Abdominais";
 myExercicio.equipment = "Polia";
-bd.push(myExercicio);
+db.push(myExercicio);
 
 myExercicio = new Exercicio();
 myExercicio.name = "Crossover com polia alta";
@@ -15,7 +15,7 @@ myExercicio.img = "http://www.musculacao.net/workoutplanner/noaccimages-exercise
 myExercicio.style = "Treino";
 myExercicio.group = "Peitoral";
 myExercicio.equipment = "Polia";
-bd.push(myExercicio);
+db.push(myExercicio);
 
 myExercicio = new Exercicio();
 myExercicio.name = "Levantamento terra";
@@ -23,20 +23,20 @@ myExercicio.img = "http://www.musculacao.net/workoutplanner/noaccimages-exercise
 myExercicio.style = "Treino";
 myExercicio.group = "Costas";
 myExercicio.equipment = "Barra";
-bd.push(myExercicio);
+db.push(myExercicio);
 
 myExercicio = new Exercicio();
 myExercicio.name = "Aeróbica";
 myExercicio.img = "http://www.musculacao.net/workoutplanner/noaccimages-exercises/Cardio/Cardio/Aerobica%20999.jpg";
 myExercicio.style = "Cardio";
-bd.push(myExercicio);
+db.push(myExercicio);
 
 myExercicio = new Exercicio();
 myExercicio.name = "Bicicleta";
 myExercicio.img = "http://www.musculacao.net/workoutplanner/noaccimages-exercises/Cardio/Cardio/Bicicleta%20999.jpg";
 myExercicio.style = "Cardio";
-bd.push(myExercicio);
+db.push(myExercicio);
 
 console.log("com");
-console.log(bd);
+console.log(db);
 loadResults();
