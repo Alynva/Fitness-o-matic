@@ -350,7 +350,7 @@ function Exercicio() {
 	this.steps;
 	this.reps;
 }
-var bd = [];
+var bd = bd || [];
 
 loadResults();
 
