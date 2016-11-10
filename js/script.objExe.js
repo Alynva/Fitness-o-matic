@@ -9,4 +9,4 @@ function Exercicio() {
 	this.reps;
 }
 
-//var bd = bd || [];
+//var db = db || [];
