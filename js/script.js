@@ -351,6 +351,8 @@ function Exercicio() {
 	this.reps;
 }
 var bd = bd || [];
+console.log("sem");
+console.log(bd);
 
 loadResults();
 
