@@ -1,5 +1,5 @@
 $:.unshift File.expand_path("../lib", __FILE__)
-require "travis/yaml/version"
+# require "travis/yaml/version"
 
 Gem::Specification.new do |s|
   s.name                  = "Fitness-o-matic"
