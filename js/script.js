@@ -104,7 +104,7 @@ function scanInfo(id, bdIndex = false) {
 	document.querySelector("#stepsAndReps").setAttribute("to", id);
 	var index = bdIndex || $("#"+id).attr("data-bd-id");
 	
-	if (bd[index].style == "Treino") {
+	if (db[index].style == "Treino") {
 		document.querySelector("#stepsAndReps").setAttribute("data-connector", "com");
 		$("label[for='inputInfo1']").text("Séries");
 		document.querySelector("#inputInfo1").setAttribute("data-name", " série");
@@ -112,7 +112,7 @@ function scanInfo(id, bdIndex = false) {
 		$("label[for='inputInfo2']").text("Repetições");
 		document.querySelector("#inputInfo2").setAttribute("data-name", "repetição");
 		document.querySelector("#inputInfo2").setAttribute("data-names", "repetições");
-	} else if (bd[index].style == "Cardio") {
+	} else if (db[index].style == "Cardio") {
 		document.querySelector("#stepsAndReps").setAttribute("data-connector", "em");
 		$("label[for='inputInfo1']").text("Potência");
 		document.querySelector("#inputInfo1").setAttribute("data-name", "%");
