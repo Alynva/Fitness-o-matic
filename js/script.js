@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 
 /* Open/Close menu lateral */ var buttons = document.querySelectorAll('.openCloseMenu');for (var i = 0; i < buttons.length; i++) {buttons[i].addEventListener("click", function(){var x = document.querySelector("body > nav");x.hasAttribute('checked') ? x.removeAttribute("checked") : x.setAttribute("checked", true);});};
 
